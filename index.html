@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostgreSQL Query App</title>
+</head>
+<body>
+  <h1>PostgreSQL Query App</h1>
+  <button onclick="executeQuery()">Database List</button>
+  <button onclick="tablolar()">En Çok Kullanılan Tablolar</button>
+  <button onclick="indexler()">En Çok Kullanılan İndeksler:</button>
+
+
+  <button onclick="sorgular()">En Çok Tüketen Sorgular:</button>
+  <button onclick="patroni()">Patroni Küme Durumu</button>
+  <button onclick="patroni1()">Patroni Yapılandırma Bilgisi</button>
+
+
+
+  <button onclick="patroni2()">Patroni Bağlantı Durumu</button>
+  <button onclick="patroni3()">Patroni Replication İstatistikleri</button>
+  <button onclick="patroni4()">Patroni Timeline Bilgisi</button>
+
+
+
+  <button onclick="patroni5()">Patroni Restore Durumu</button>
+  <button onclick="patroni6()">Patroni Watchdog Bilgisi</button>
+  <button onclick="blok()">Veritabanı Blok İstatistikleri</button>
+
+
+
+  <button onclick="blok1()">Veritabanı İstatistikleri:</button>
+  <button onclick="blok3()">Aktif Bağlantılar:</button>
+  <button onclick="blok4()">Patroni Yedekleme Durumu</button>
+
+
+
+
+  <div id="result"></div>
+  <div id="result1"></div>
+  <div id="result2"></div>
+  <div id="result3"></div>
+  <div id="result4"></div>
+  <div id="result5"></div>
+  <div id="result6"></div>
+  <div id="result7"></div>
+  <div id="result8"></div>
+  <div id="result9"></div>
+  <div id="result10"></div>
+  <div id="result11"></div>
+  <div id="resul12"></div>
+  <div id="resul13"></div>
+
+
+
+  <script>
+    function executeQuery() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr.open("GET", "http://localhost:3000/executeQuery", true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result").innerHTML = xhr.responseText;
+        }
+      };
+
+      xhr.send();
+    }
+
+    function tablolar() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr1 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr1.open("GET", "http://localhost:3000/tablolar", true);
+      xhr1.setRequestHeader("Content-Type", "application/json");
+      xhr1.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr1.onreadystatechange = function () {
+        if (xhr1.readyState == 4 && xhr1.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result1").innerHTML = xhr1.responseText;
+        }
+      }
+
+      xhr1.send();
+    }
+
+
+    function indexler() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr2 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr2.open("GET", "http://localhost:3000/indexler", true);
+      xhr2.setRequestHeader("Content-Type", "application/json");
+      xhr2.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr2.onreadystatechange = function () {
+        if (xhr2.readyState == 4 && xhr2.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result2").innerHTML = xhr2.responseText;
+        }
+      };
+
+      xhr2.send();
+    }
+
+    function sorgular() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr3 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr3.open("GET", "http://localhost:3000/sorgular", true);
+      xhr3.setRequestHeader("Content-Type", "application/json");
+      xhr3.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr3.onreadystatechange = function () {
+        if (xhr3.readyState == 4 && xhr3.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result3").innerHTML = xhr3.responseText;
+        }
+      };
+
+      xhr3.send();
+    }
+
+    function patroni() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr4 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr4.open("GET", "http://localhost:3000/patroni", true);
+      xhr4.setRequestHeader("Content-Type", "application/json");
+      xhr4.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr4.onreadystatechange = function () {
+        if (xhr4.readyState == 4 && xhr4.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result4").innerHTML = xhr4.responseText;
+        }
+      };
+
+      xhr4.send();
+    }
+
+
+
+    function patroni1() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr5 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr5.open("GET", "http://localhost:3000/patroni1", true);
+      xhr5.setRequestHeader("Content-Type", "application/json");
+      xhr5.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr5.onreadystatechange = function () {
+        if (xhr5.readyState == 4 && xhr5.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result5").innerHTML = xhr5.responseText;
+        }
+      };
+
+      xhr5.send();
+    }
+
+    function patroni2() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr6 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr6.open("GET", "http://localhost:3000/patroni2", true);
+      xhr6.setRequestHeader("Content-Type", "application/json");
+      xhr6.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr6.onreadystatechange = function () {
+        if (xhr6.readyState == 4 && xhr5.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result6").innerHTML = xhr6.responseText;
+        }
+      };
+
+      xhr6.send();
+    }
+    
+     function patroni3() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr7 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr7.open("GET", "http://localhost:3000/patroni3", true);
+      xhr7.setRequestHeader("Content-Type", "application/json");
+      xhr7.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr7.onreadystatechange = function () {
+        if (xhr7.readyState == 4 && xhr7.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result7").innerHTML = xhr7.responseText;
+        }
+      };
+
+      xhr7.send();
+    }
+
+     function patroni4() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr8 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr8.open("GET", "http://localhost:3000/patroni4", true);
+      xhr8.setRequestHeader("Content-Type", "application/json");
+      xhr8.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr8.onreadystatechange = function () {
+        if (xhr8.readyState == 4 && xhr8.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result8").innerHTML = xhr8.responseText;
+        }
+      };
+
+      xhr8.send();
+    }
+
+     function patroni5() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr9 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr9.open("GET", "http://localhost:3000/patroni5", true);
+      xhr9.setRequestHeader("Content-Type", "application/json");
+      xhr9.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr9.onreadystatechange = function () {
+        if (xhr9.readyState == 4 && xhr9.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result9").innerHTML = xhr9.responseText;
+        }
+      };
+
+      xhr9.send();
+    }
+
+
+     function patroni6() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr10 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr10.open("GET", "http://localhost:3000/patroni6", true);
+      xhr10.setRequestHeader("Content-Type", "application/json");
+      xhr10.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr10.onreadystatechange = function () {
+        if (xhr10.readyState == 4 && xhr10.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result10").innerHTML = xhr10.responseText;
+        }
+      };
+
+      xhr10.send();
+    }
+
+     function blok1() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr11 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr11.open("GET", "http://localhost:3000/blok1", true);
+      xhr11.setRequestHeader("Content-Type", "application/json");
+      xhr11.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr11.onreadystatechange = function () {
+        if (xhr11.readyState == 4 && xhr11.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result11").innerHTML = xhr11.responseText;
+        }
+      };
+
+      xhr11.send();
+    }
+
+
+     function blok3() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr12 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr12.open("GET", "http://localhost:3000/blok3", true);
+      xhr12.setRequestHeader("Content-Type", "application/json");
+      xhr12.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr12.onreadystatechange = function () {
+        if (xhr12.readyState == 4 && xhr12.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result12").innerHTML = xhr12.responseText;
+        }
+      };
+
+      xhr12.send();
+    }
+
+
+  
+     function blok4() {
+      // AJAX kullanarak Node.js uygulamasına istek gönder
+      var xhr13 = new XMLHttpRequest();
+
+      // Cross-origin istek yapılacaksa gerekli CORS başlıklarını ekleyin
+      xhr13.open("GET", "http://localhost:3000/blok4", true);
+      xhr13.setRequestHeader("Content-Type", "application/json");
+      xhr13.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+      xhr13.onreadystatechange = function () {
+        if (xhr13.readyState == 4 && xhr13.status == 200) {
+          // İstek başarılı olduğunda sonucu ekrana yaz
+          document.getElementById("result12").innerHTML = xhr13.responseText;
+        }
+      };
+
+      xhr13.send();
+    }
+
+
+      
+       
+
+
+
+
+
+  </script>
+</body>
+</html>
+
